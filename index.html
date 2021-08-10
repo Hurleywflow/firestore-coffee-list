@@ -1,0 +1,39 @@
+<html lang="en">
+	<head>
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-firestore.js"></script>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<h1>Cloud Cafe</h1>
+
+		<div class="content">
+			<form id="add-cafe-form"></form>
+
+			<ul id="cafe-list"></ul>
+		</div>
+
+		<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+		<script>
+			// Your web app's Firebase configuration
+			var firebaseConfig = {
+				apiKey: 'AIzaSyAuM4eNM8qHOFQwSQ57rnh4_yxLoA2tuX4',
+				authDomain: 'firestore-tuts-b2581.firebaseapp.com',
+				projectId: 'firestore-tuts-b2581',
+				storageBucket: 'firestore-tuts-b2581.appspot.com',
+				messagingSenderId: '743222916865',
+				appId: '1:743222916865:web:8dd73bb560aa5c91674d00',
+			};
+			// Initialize Firebase
+			firebase.initializeApp(firebaseConfig);
+			//create new instance database
+			const db = firebase.firestore();
+			// set up this line code to get rid of warning about this in console;
+			db.settings({ timestampsInSnapshots: true });
+		</script>
+		<script src="app.js"></script>
+	</body>
+</html>
